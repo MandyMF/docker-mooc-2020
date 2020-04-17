@@ -1,0 +1,22 @@
+Script started on 2020-04-17 19:29:54+0300
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+1bde7f96b854        rabbitmq            "docker-entrypoint.s…"   3 minutes ago       Exited (0) 3 minutes ago                       nice_cerf
+38b034bd5503        logstash:7.6.2      "/usr/local/bin/dock…"   3 minutes ago       Exited (0) 3 minutes ago                       beautiful_panini
+6c4c1bac8ca7        nginx               "nginx -g 'daemon of…"   15 minutes ago      Up 15 minutes              80/tcp              zealous_khorana
+6c
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all dangling images
+  - all dangling build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+1bde7f96b8548057e23e40aa4176cb95a8219cf0f17dda5f8759c947df826f02
+38b034bd5503040099a9c6009c6704fe3459f1f069cd14a319178052592242d0
+6c4c1bac8ca70f143af7e40cce9887540075b468296290c0154b258f0ca861f7
+
+Total reclaimed space: 94B
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+Script done on 2020-04-17 19:29:56+0300
