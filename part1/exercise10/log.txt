@@ -1,13 +1,17 @@
-Script started on 2020-04-18 15:28:57+0300
+Script started on 2020-04-18 16:15:02+0300
+Untagged: fe-example:latest
+Deleted: sha256:c619c1d8732f4d9ab683fc04194693494a6d8ce622a893b6dc1a4f2256f5cd49
+Deleted: sha256:fa42eca083665e1923bbedda71d68dbec3bd29cbb68a86ac9163e1ca3c08e8dd
+Deleted: sha256:a488418337fca2f4520b2686bedf930f012ae2c0ee01487331299c4440598285
+Deleted: sha256:ad260f87a3cab944cee30b188b3c9d5e6fedad754518c8466dad2c8a123b889e
 Sending build context to Docker daemon  3.584kB
 Step 1/5 : FROM alpine
  ---> a187dde48cd2
 Step 2/5 : WORKDIR /usr/app
- ---> Running in cb6f519e9019
-Removing intermediate container cb6f519e9019
- ---> 5bac3886f205
-Step 3/5 : RUN apk add --no-cache git nodejs nodejs-npm &&     git clone https://github.com/docker-hy/frontend-example-docker.git . &&     npm install -g serve
- ---> Running in 4cc8fd49b99b
+ ---> Using cache
+ ---> 49f97277200d
+Step 3/5 : RUN apk add --no-cache git nodejs nodejs-npm &&     git clone https://github.com/docker-hy/frontend-example-docker.git . &&     npm install
+ ---> Running in cd7fe7859fad
 fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
 fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/community/x86_64/APKINDEX.tar.gz
 (1/12) Installing ca-certificates (20191127-r1)
@@ -26,40 +30,40 @@ Executing busybox-1.31.1-r9.trigger
 Executing ca-certificates-20191127-r1.trigger
 OK: 79 MiB in 26 packages
 [91mCloning into '.'...
-[0m/usr/bin/serve -> /usr/lib/node_modules/serve/bin/serve.js
-+ serve@11.3.0
-added 78 packages from 39 contributors in 5.035s
-Removing intermediate container 4cc8fd49b99b
- ---> 9c9c23a07670
-Step 4/5 : EXPOSE 5000
- ---> Running in 64648de14b3c
-Removing intermediate container 64648de14b3c
- ---> 55347d4dc0ec
-Step 5/5 : CMD ["serve", "-s", "-l", "5000", "dist"]
- ---> Running in 59387f9a063d
-Removing intermediate container 59387f9a063d
- ---> eaa97952d6e9
-Successfully built eaa97952d6e9
-Successfully tagged fe-example:latest
-e804ce5d23709a0618139b92dcce49964a3dca24b94a36abd482e1ce1928a869
-* Rebuilt URL to: localhost:5000/
-*   Trying 127.0.0.1...
-* TCP_NODELAY set
-* Connected to localhost (127.0.0.1) port 5000 (#0)
-> GET / HTTP/1.1
-> Host: localhost:5000
-> User-Agent: curl/7.58.0
-> Accept: */*
-> 
-< HTTP/1.1 404 Not Found
-< Content-Type: text/html; charset=utf-8
-< Vary: Accept-Encoding
-< Date: Sat, 18 Apr 2020 12:29:13 GMT
-< Connection: keep-alive
-< Transfer-Encoding: chunked
-< 
-<!DOCTYPE html><head> <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/> <style> body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; cursor: default; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; } main, aside, section { display: flex; justify-content: center; align-items: center; flex-direction: column; } main { height: 100%; } aside { background: #000; flex-shrink: 1; padding: 30px 20px; } aside p { margin: 0; color: #999999; font-size: 14px; line-height: 24px; } aside a { color: #fff; text-decoration: none; } section span { font-size: 24px; font-weight: 500; display: block; border-bottom: 1px solid #EAEAEA; text-align: center; paddin* Connection #0 to host localhost left intact
-g-bottom: 20px; width: 100px; } section p { font-size: 14px; font-weight: 400; } section span + p { margin: 20px 0 0 0; } @media (min-width: 768px) { section { height: 40px; flex-direction: row; } section span, section p { height: 100%; line-height: 40px; } section span { border-bottom: 0; border-right: 1px solid #EAEAEA; padding: 0 20px 0 0; width: auto; } section span + p { margin: 0; padding-left: 20px; } aside { padding: 50px 0; } aside p { max-width: 520px; text-align: center; } } </style></head><body> <main> <section> <span>404</span> <p>The requested path could not be found</p> </section> </main></body>Exercise completed, stopping and removing container
-fe-example
+[0m
+> core-js@2.6.11 postinstall /usr/app/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
 
-Script done on 2020-04-18 15:29:13+0300
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+[91mnpm [0m[91mWARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91m
+[0madded 1462 packages from 472 contributors and audited 12930 packages in 18.48s
+
+28 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+Removing intermediate container cd7fe7859fad
+ ---> d781083cc510
+Step 4/5 : EXPOSE 5000
+ ---> Running in f6ebeee38bdc
+Removing intermediate container f6ebeee38bdc
+ ---> dd33216a27b7
+Step 5/5 : CMD ["npm", "start"]
+ ---> Running in e932007f6f00
+Removing intermediate container e932007f6f00
+ ---> 3eb6bfb2f202
+Successfully built 3eb6bfb2f202
+Successfully tagged fe-example:latest
+2c03ba365790417f6704748323fecb88d414cc1cd76c6c48ebbae9a92feef322
+
+Script done on 2020-04-18 16:15:35+0300
