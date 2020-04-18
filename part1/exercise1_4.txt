@@ -1,0 +1,21 @@
+Script started on 2020-04-18 12:38:03+0300
+root@d320a915ec50:/usr/app# [Kroot@d320a915ec50:/usr/app# tail -f ./logs.txt 
+Secret message is:
+"Docker is easy"
+Sat, 18 Apr 2020 09:37:50 GMT
+Sat, 18 Apr 2020 09:37:53 GMT
+Sat, 18 Apr 2020 09:37:56 GMT
+Sat, 18 Apr 2020 09:37:59 GMT
+Secret message is:
+"Docker is easy"
+Sat, 18 Apr 2020 09:38:05 GMT
+Sat, 18 Apr 2020 09:38:08 GMT
+Sat, 18 Apr 2020 09:38:11 GMT
+Sat, 18 Apr 2020 09:38:14 GMT
+Secret message is:
+"Docker is easy"
+^C
+root@d320a915ec50:/usr/app# exit
+exit
+
+Script done on 2020-04-18 12:38:21+0300
