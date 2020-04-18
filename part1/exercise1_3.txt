@@ -1,0 +1,7 @@
+Script started on 2020-04-18 12:29:30+0300
+[1G[0JGive me the password: [23Gbasics
+You found the correct password. Secret message is:
+"This is the secret message"
+
+
+Script done on 2020-04-18 12:29:33+0300
