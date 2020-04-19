@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: Dockerfile_fe
+    ports:
+      - 5000:5000
+    environment:
+      - API_URL=http://localhost:8000
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile_be
+    ports:
+      - 8000:8000
+    environment:
+      - FRONT_URL=http://localhost:5000
+      - REDIS=redis
+    volumes:
+        - type: bind
+          source: ./logs.txt
+          target: /usr/app/logs.txt
+  redis:
+    container_name: redis
+    image: redis
+    
