@@ -1,0 +1,46 @@
+version: "3.7"
+
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: Dockerfile_fe
+    ports:
+      - 5000:5000
+    environment:
+      - API_URL=http://localhost:8000
+    depends_on:
+      - backend
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile_be
+    ports:
+      - 8000:8000
+    environment:
+      - FRONT_URL=http://localhost:5000
+      - REDIS=redis
+      - DB_USERNAME=irc_hero
+      - DB_PASSWORD=hunter2
+      - DB_NAME=alexandria_library
+      - DB_HOST=postgres
+    volumes:
+      - type: bind
+        source: ./logs.txt
+        target: /usr/app/logs.txt
+    depends_on:
+      - redis
+      - postgres
+  redis:
+    container_name: redis
+    image: redis
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      - POSTGRES_USER=irc_hero
+      - POSTGRES_PASSWORD=hunter2
+      - POSTGRES_DB=alexandria_library
+    restart: unless-stopped
