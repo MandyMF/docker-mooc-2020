@@ -1,0 +1,43 @@
+version: "3.7"
+
+services:
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile_be
+    volumes:
+      - ./logs.txt:/usr/app/logs.txt
+    environment:
+      - FRONT_URL=http://localhost
+      - REDIS=redis
+      - DB_USERNAME=irc_hero
+      - DB_PASSWORD=hunter2
+      - DB_NAME=messages
+      - DB_HOST=postgres
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile_fe
+    ports:
+      - 5000:5000
+    container_name: frontend
+    environment:
+      - API_URL=http://localhost/api
+  redis:
+    image: redis
+    container_name: redis
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=irc_hero
+      - POSTGRES_PASSWORD=hunter2
+      - POSTGRES_DB=messages
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
