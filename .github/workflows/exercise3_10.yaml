@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Build Dockerfile
         uses: docker/build-push-action@v1
-        path: ./part3/exercise2
         with:
+          path: ./part3/exercise2
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: any1/deploy-exercise
