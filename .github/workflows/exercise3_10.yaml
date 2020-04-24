@@ -19,7 +19,7 @@ jobs:
       - name: Build Dockerfile
         run: docker build -t frontend .
       - name: Add tags
-        run: docker tag ${{ secrets.DOCKER_USERNAME }}/deploy-exercise
+        run: docker tag frontend ${{ secrets.DOCKER_USERNAME }}/deploy-exercise
       - name: Push to Docker Hub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/deploy-exercise
       - name: Login to Heroku
