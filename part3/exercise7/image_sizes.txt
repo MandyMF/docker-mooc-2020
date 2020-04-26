@@ -1,0 +1,5 @@
+Script started on 2020-04-26 19:03:33+0300
+exercise1_7_orig                        latest              3010a27f215b        7 seconds ago       124MB
+exercise1_7_optimized                   latest              7d5b70c8dd10        2 minutes ago       5.6MB
+
+Script done on 2020-04-26 19:03:34+0300

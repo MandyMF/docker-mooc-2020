@@ -1,0 +1,15 @@
+FROM alpine:3.7
+
+WORKDIR /usr/app
+
+COPY script.sh .
+
+RUN apk add --no-cache curl && \
+    addgroup app && \
+    adduser -D -G app app && \
+    chown -R app:app /usr/app && \
+    chmod +x /usr/app/script.sh
+
+USER app
+
+CMD ["/bin/ash", "script.sh"]
