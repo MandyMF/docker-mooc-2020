@@ -1,0 +1,19 @@
+FROM ubuntu:18.04
+
+WORKDIR /usr/app
+
+RUN apt-get update && apt-get install -y \
+    nodejs npm git && \
+    git clone https://github.com/docker-hy/frontend-example-docker.git . && \
+    npm install && \
+    npm install -g serve && \
+    npm run build && \
+    apt-get purge -y --auto-remove git && \
+    rm -rf /var/lib/apt/lists/* && \ 
+    useradd -m app
+
+USER app
+
+EXPOSE 5000
+
+CMD ["serve", "-s", "-l", "5000", "dist"]

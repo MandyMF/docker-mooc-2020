@@ -1,0 +1,7 @@
+IMAGE               CREATED              CREATED BY                                      SIZE                COMMENT
+e0c5657c439e        About a minute ago   /bin/sh -c #(nop)  CMD ["npm" "start"]          0B                  
+34ec5713076b        About a minute ago   /bin/sh -c #(nop)  EXPOSE 5000                  0B                  
+02e347226d53        About a minute ago   /bin/sh -c apk add --no-cache git nodejs nod…   261MB               
+00921b2314af        6 minutes ago        /bin/sh -c #(nop) WORKDIR /usr/app              0B                  
+f70734b6a266        6 hours ago          /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B                  
+<missing>           6 hours ago          /bin/sh -c #(nop) ADD file:b91adb67b670d3a6f…   5.61MB              

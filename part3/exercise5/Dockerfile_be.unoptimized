@@ -1,0 +1,17 @@
+FROM ubuntu:18.04
+
+WORKDIR /usr/app
+
+RUN apt-get update && apt-get install -y \
+    nodejs npm git && \
+    git clone https://github.com/docker-hy/backend-example-docker.git . && \
+    npm install && \
+    apt-get purge -y --auto-remove git && \
+    rm -rf /var/lib/apt/lists/* && \ 
+    useradd -m app
+
+USER app
+
+EXPOSE 8000
+
+CMD ["npm", "start"]

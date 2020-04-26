@@ -1,0 +1,17 @@
+FROM alpine
+
+WORKDIR /usr/app
+
+RUN apk add --no-cache git nodejs nodejs-npm && \
+    git clone https://github.com/docker-hy/frontend-example-docker.git . && \
+    npm install && \
+    npm install -g serve && \
+    npm run build && \
+    apk del git && \
+    addgroup app && \
+    adduser -D -G app app && \
+    chown -R app:app /usr/app
+
+USER app
+
+CMD serve -s -l $PORT dist
