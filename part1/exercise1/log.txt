@@ -1,7 +1,0 @@
-Script started on 2020-04-17 19:23:38+0300
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
-a01d3cce8693        logstash:7.6.2      "/usr/local/bin/dock…"   8 minutes ago       Exited (0) 7 minutes ago                       sweet_kirch
-edaca1a7bad6        rabbitmq            "docker-entrypoint.s…"   9 minutes ago       Exited (0) 7 minutes ago                       quizzical_cori
-6c4c1bac8ca7        nginx               "nginx -g 'daemon of…"   9 minutes ago       Up 9 minutes               80/tcp              zealous_khorana
-
-Script done on 2020-04-17 19:23:38+0300

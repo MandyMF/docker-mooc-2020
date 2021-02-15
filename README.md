@@ -1,2 +1,2 @@
 # docker-mooc-2020
-Repository for DevOps with Docker MOOC course
+Repository originally for returning DevOps with Docker MOOC course assignments.

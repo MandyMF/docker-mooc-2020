@@ -1,5 +1,0 @@
-FROM ubuntu:16.04
-WORKDIR /app
-COPY script_orig.sh .
-RUN chmod u+x script_orig.sh
-CMD ["./script_orig.sh"]
