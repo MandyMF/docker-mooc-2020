@@ -1,1 +1,0 @@
-script -c "docker exec -it exercise1_4 /bin/bash" exercise1_4.txt

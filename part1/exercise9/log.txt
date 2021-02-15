@@ -1,4 +1,0 @@
-Script started on 2020-04-18 14:54:40+0300
-6031e66dfcc5847e92b7a6c7b6c76b285eb0737568b8feaa12550f0fdbab4584
-Ports configured correctly!!
-Script done on 2020-04-18 14:54:42+0300
